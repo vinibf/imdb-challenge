@@ -1,0 +1,370 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-size: 10px;
+	font-family: "Montserrat", sans-serif;
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+.white {
+	color: #fff;
+}
+
+.yellow {
+	color: #e4bb23;
+}
+
+.black {
+	color: #000;
+}
+
+.grey {
+	color: #bababa;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.color-toggleable:hover {
+	color: #e4bb23;
+}
+
+.promo-poster {
+	background-image: url(../img/capa-madmax2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	width: 100%;
+	height: 90vh;
+	padding: 20px 0;
+}
+
+.promo-poster::after {
+	background: linear-gradient(
+		0deg,
+		rgba(0, 0, 0, 0.6) 0%,
+		rgba(0, 212, 255, 0) 75%
+	);
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.promo-poster .container {
+	justify-content: space-between;
+	z-index: 2;
+	position: relative;
+}
+
+.container {
+	margin: 0 auto;
+	width: 85%;
+	height: 100%;
+	max-width: 960px;
+	display: flex;
+	flex-direction: column;
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.logo {
+	display: flex;
+}
+
+.menu-list {
+	display: flex;
+}
+
+.menu-list li {
+	margin: 0 25px;
+}
+
+.menu-list a {
+	font-size: 1.3em;
+	font-weight: bold;
+	transition: all 0.3s ease-in-out;
+}
+
+.user-info {
+	display: flex;
+	align-items: center;
+}
+
+.user-avatar {
+	width: 45px;
+	height: 45px;
+	overflow: hidden;
+	border-radius: 100%;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+	margin-right: 15px;
+}
+
+.user-avatar img {
+	width: 100%;
+}
+
+.user-info p {
+	font-size: 1.3em;
+	font-weight: bold;
+	margin: 0;
+}
+
+.promo-poster-info h1 {
+	margin: 0;
+	font-size: 6.5em;
+	font-weight: bold;
+	line-height: 1.2em;
+}
+
+.promo-gender-list {
+	display: flex;
+	margin: 15px 0 30px;
+}
+
+.promo-gender-list li {
+	margin-right: 15px;
+}
+
+.promo-gender-list a {
+	font-size: 13px;
+	transition: all 0.3s ease-in-out;
+}
+
+.promo-button {
+	display: inline-block;
+	position: relative;
+	padding: 15px 50px;
+	background-color: #e4bb23;
+	border-radius: 40px;
+	font-size: 1.5em;
+	transition: all 0.3s ease-in-out;
+}
+
+.promo-button:hover {
+	background-color: #bc9a1d;
+}
+
+.promo-button i {
+	font-size: 1.5em;
+	position: absolute;
+	top: 12px;
+	right: 18px;
+}
+
+.promo-data {
+	padding: 20px 0;
+	font-size: 1.4em;
+}
+
+.catalog {
+	width: 100%;
+	background-color: #f2f2f2;
+}
+
+.filter-menu {
+	width: 100%;
+}
+
+.filter-menu ul {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.filter-menu li {
+	margin: 0 20px;
+}
+
+.filter-menu a {
+	display: inline-block;
+	padding: 25px 0;
+	font-size: 1.3em;
+	font-weight: bold;
+	transition: all 0.3s ease-in-out;
+}
+
+.filter-menu a:hover {
+	box-shadow: inset 0 -1px 0 #e4bb23;
+}
+
+.catalog-list {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	justify-content: space-between;
+	margin: 25px 0;
+}
+
+.movie-poster {
+	background-color: #fff;
+	width: 24%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	border-radius: 8px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	margin-bottom: 30px;
+}
+
+.banner {
+	margin: 0;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	position: relative;
+}
+
+.hidden-banner {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	padding: 80px 20px;
+	background-color: rgba(0, 0, 0, 0.5);
+	visibility: hidden;
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	transition: all 0.3s ease-in-out;
+}
+
+.movie-poster:hover .hidden-banner {
+	opacity: 1;
+	visibility: visible;
+}
+
+.hidden-banner h2 {
+	font-size: 2em;
+	line-height: 1em;
+	margin: 20px 0;
+}
+
+.hidden-banner a {
+	font-size: 5em;
+	transition: all 0.3s ease-in-out;
+}
+
+.banner img {
+	width: 100%;
+	height: auto;
+}
+
+.movie-info {
+	width: 100%;
+	padding: 10px;
+}
+
+.movie-info h3 {
+	font-size: 1.3em;
+	font-weight: bold;
+	margin: 0;
+}
+
+.movie-gender-list {
+	display: flex;
+	justify-content: flex-start;
+	margin: 10px 0;
+}
+
+.movie-gender-list li {
+	display: inline-block;
+	margin-right: 8px;
+}
+
+.movie-gender-list a {
+	font-size: 1.2em;
+}
+
+.movie-gender-list a:hover {
+	text-decoration: underline;
+}
+
+.movie-score {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-size: 2em;
+	font-weight: bold;
+}
+
+.movie-score i {
+	color: #ccc;
+	cursor: pointer;
+}
+
+.movie-score i:hover {
+	color: #e74c3c;
+}
+
+.movie-score p {
+	margin: 0;
+}
+
+.footer {
+	width: 100%;
+	background-color: #fff;
+	padding: 25px 0;
+}
+
+.footer .container {
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.media-list {
+	display: flex;
+}
+
+.media-list li {
+	margin-left: 40px;
+}
+
+.media-list a {
+	font-size: 2.5em;
+	transition: all 0.3s ease-in-out;
+}
+
+.twitter-icon a:hover {
+	color: #55acee;
+}
+
+.facebook-icon a:hover {
+	color: #3b5998;
+}
+
+.instagram-icon a:hover {
+	color: #e95950;
+}
